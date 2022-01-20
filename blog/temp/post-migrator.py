@@ -10,8 +10,6 @@ file_list = os.listdir(folder)
 parsed_posts = []
 
 for file in file_list:
-
-# file = file_list[0]
     dir = folder + '/' + file
     post = frontmatter.load(dir)
     title = post['title']
