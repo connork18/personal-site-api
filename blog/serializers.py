@@ -9,7 +9,7 @@ class PostSerializer(serializers.ModelSerializer):
     # from the docs
     class Meta:
         model = Post
-        fields = ['title', 'slug', 'updated_on', 'created_on', 'content', 'status']
+        fields = ['title', 'slug', 'published_on', 'created_on', 'content', 'status']
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

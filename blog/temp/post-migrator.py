@@ -7,6 +7,7 @@ import pytz
 
 '''
 # DELETE ALL EXISTING POSTS #
+from blog.models import Post
 Post.objects.all().delete()
 '''
 
@@ -24,7 +25,7 @@ for file in file_list:
     title = post['title']
     new_date = datetime.strptime(post['date'], '%Y-%m-%d').replace(tzinfo=eastern)
     created_on = new_date
-    updated_on = new_date
+    published_on = new_date
     status = 1
     slug = file.replace('.md','')
     content = post.content
@@ -32,7 +33,7 @@ for file in file_list:
         'title': title,
         'slug': slug,
         'created_on': created_on,
-        'updated_on': updated_on,
+        'published_on': published_on,
         'status': status,
         'content': content,
     }

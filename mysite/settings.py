@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-$l-0mwvuxr=hrf^ivzh8v99+=r(83g438qkd_c&m+942%&y4z9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['personal-site-api-2.eba-rhwubmrk.us-west-2.elasticbeanstalk.com','localhost','127.0.0.1']
 
 
 # Application definition
@@ -53,7 +53,7 @@ MIDDLEWARE = [
 
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 200
 }
 
 ROOT_URLCONF = 'mysite.urls'

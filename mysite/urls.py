@@ -20,6 +20,8 @@ from django.contrib import admin
 
 router = routers.DefaultRouter()
 router.register(r'posts', views.PostViewSet)
+# router.register(r'<slug:slug>/', views.PostDetail, name='post_detail'),
+
 
 # wiring up our API using automatic URL routing.
 # Also including login URLs for the browsable API.
