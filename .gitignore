@@ -1,5 +1,5 @@
 # elastic beanstalk
-.ebextensions/
+# .ebextensions/
 .elasticbeanstalk/
 
 # Byte-compiled / optimized / DLL files
