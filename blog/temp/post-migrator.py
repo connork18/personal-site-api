@@ -11,7 +11,7 @@ from blog.models import Post
 Post.objects.all().delete()
 '''
 
-folder = '/users/ckelley/personal-site/nextjs-blog/posts'
+folder = './posts'
 
 file_list = os.listdir(folder)
 
