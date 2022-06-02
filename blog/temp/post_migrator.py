@@ -13,7 +13,8 @@ from blog.models import Post
 Post.objects.all().delete()
 
 # MIGRATE POSTS #
-
+from blog.temp.post_migrator import migrate_posts
+migrate_posts()
 '''
 
 def migrate_posts():

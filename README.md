@@ -6,11 +6,17 @@ pyenv activate blog-venv
 python manage.py runserver
 ```
 
-# DELETE THEN MIGRATE ALL EXISTING POSTS #
+# activate venv on the aws eb server #
 
 ```
-from blog.models import Post
-Post.objects.all().delete()
+source /var/app/venv/*/bin/activate
+cd /var/app/current
+```
+
+```
+python manage.py shell
+from blog.temp.post_migrator import migrate_posts
+migrate_posts()
 ```
 
 # Deploy to elastic beanstalk
