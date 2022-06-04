@@ -10,11 +10,14 @@ python manage.py runserver
 
 ```
 source /var/app/venv/*/bin/activate
+export $(sudo cat /opt/elasticbeanstalk/deployment/env | xargs)
 cd /var/app/current
 ```
 
 ```
 python manage.py shell
+from blog.models import Post
+Post.objects.all().delete()
 from blog.temp.post_migrator import migrate_posts
 migrate_posts()
 ```
