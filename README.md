@@ -25,9 +25,9 @@ migrate_posts()
 # Deploy to elastic beanstalk
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-django.html#python-django-configure-for-eb
 
-# Note--make sure you commit changes to git repo before deploying
+Note--make sure you commit changes to git repo before deploying
 
 # Database
-I wanted to just use my db.sqlite3 database. I ran into some issues though that I admittedly didn't put much effort towards overcoming. So I added a postgres database with AWS RDS.
-
 https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/create-deploy-python-rds.html
+
+# Create admin superuser
