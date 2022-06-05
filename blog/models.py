@@ -17,3 +17,20 @@ class Post(models.Model):
 
     class Meta:
         ordering = ['-created_on']
+
+TYPE = (
+    (0, "Yoga"),
+    (1, "Conditioning"),
+    (2, "Upper"),
+    (3, "Lower"),
+    (4, "Full"),
+    (5, "Recovery"),
+    )
+
+class Workout(models.Model):
+    date = models.DateTimeField()
+    content = models.TextField()
+    type = models.IntegerField(choices=TYPE)
+
+    class Meta:
+        ordering = ['-date']

@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post
+from .models import Post, Workout
 
 class AdminPost(admin.ModelAdmin):
     list_display = (
@@ -14,3 +14,14 @@ class AdminPost(admin.ModelAdmin):
     prepopulated_fields = {'slug': ('title',)}
 
 admin.site.register(Post, AdminPost)
+
+class AdminWorkout(admin.ModelAdmin):
+    list_display = (
+        'type',
+        'date',
+        'content',
+    )
+    list_filter = ("type",)
+    search_fields = ['type', 'content']
+
+admin.site.register(Workout, AdminWorkout)

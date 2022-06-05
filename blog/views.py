@@ -3,8 +3,8 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
 from django.views import generic
-from blog.models import Post
-from blog.serializers import PostSerializer
+from blog.models import Post, Workout
+from blog.serializers import PostSerializer, WorkoutSerializer
 
 
 class PostViewSet(viewsets.ReadOnlyModelViewSet):
@@ -15,8 +15,10 @@ class PostViewSet(viewsets.ReadOnlyModelViewSet):
     lookup_field = 'slug'
     serializer_class = PostSerializer
 
-# class PostDetailViewSet(generic.detailview):
-#   """
-#   An endpoint to retrieve a specific blog based on URL
-#   """
-#   model = Post
+class WorkoutViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    A simple endpoint for retrieving workouts
+    """
+    queryset = Workout.objects.all()
+    serializer_class = WorkoutSerializer
+

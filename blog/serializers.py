@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from .models import Post, STATUS
+from .models import Post, STATUS, Workout
 from rest_framework import serializers
 
 
@@ -10,6 +10,11 @@ class PostSerializer(serializers.ModelSerializer):
     class Meta:
         model = Post
         fields = ['title', 'slug', 'published_on', 'created_on', 'content', 'status']
+
+class WorkoutSerializer(serializers.ModelSerializer):
+    class Meta:
+      model = Workout
+      fiels = '__all__'
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:

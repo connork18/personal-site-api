@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 
 router = routers.DefaultRouter()
 router.register(r'posts', views.PostViewSet)
+router.register(r'workouts', views.WorkoutViewSet)
 # router.register(r'<slug:slug>/', views.PostDetail, name='post_detail'),
 
 
