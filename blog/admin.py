@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Post, Workout
+from .models import Post, Weight, Workout
 
 class AdminPost(admin.ModelAdmin):
     list_display = (
@@ -25,3 +25,13 @@ class AdminWorkout(admin.ModelAdmin):
     search_fields = ['type', 'content']
 
 admin.site.register(Workout, AdminWorkout)
+
+class AdminWeight(admin.ModelAdmin):
+    list_display = (
+        'date',
+        'weight',
+    )
+    list_filter = ("date",)
+    search_fields = ['date']
+
+admin.site.register(Weight, AdminWeight)
