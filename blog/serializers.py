@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User, Group
-from .models import Post, STATUS, Workout
+from .models import Post, STATUS, Weight, Workout
 from rest_framework import serializers
 
 
@@ -14,6 +14,11 @@ class PostSerializer(serializers.ModelSerializer):
 class WorkoutSerializer(serializers.ModelSerializer):
     class Meta:
       model = Workout
+      fiels = '__all__'
+
+class WeightSerializer(serializers.ModelSerializer):
+    class Meta:
+      model = Weight
       fiels = '__all__'
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):

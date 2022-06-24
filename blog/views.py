@@ -3,8 +3,8 @@ from django.contrib.auth.models import User, Group
 from rest_framework import viewsets
 from rest_framework import permissions
 from django.views import generic
-from blog.models import Post, Workout
-from blog.serializers import PostSerializer, WorkoutSerializer
+from blog.models import Post, Weight, Workout
+from blog.serializers import PostSerializer, WeightSerializer, WorkoutSerializer
 
 
 class PostViewSet(viewsets.ReadOnlyModelViewSet):
@@ -21,4 +21,11 @@ class WorkoutViewSet(viewsets.ReadOnlyModelViewSet):
     """
     queryset = Workout.objects.all()
     serializer_class = WorkoutSerializer
+
+class WeightViewSet(viewsets.ReadOnlyModelViewSet):
+    """
+    A simple endpoint for retrieving workouts
+    """
+    queryset = Weight.objects.all()
+    serializer_class = WeightSerializer
 

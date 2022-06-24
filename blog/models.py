@@ -34,3 +34,10 @@ class Workout(models.Model):
 
     class Meta:
         ordering = ['-date']
+
+class Weight(models.Model):
+    date = models.DateTimeField()
+    weight = models.DecimalField(decimal_places=2, max_digits=5)
+
+    class Meta:
+        ordering = ['-date']

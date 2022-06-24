@@ -2,7 +2,7 @@
 The django-rest-framework api for my personal site, connorkelley.in
 
 ```
-pyenv activate blog-venv
+pyenv activate blog-venv-2
 python manage.py runserver
 ```
 
