@@ -14,12 +14,12 @@ class PostSerializer(serializers.ModelSerializer):
 class WorkoutSerializer(serializers.ModelSerializer):
     class Meta:
       model = Workout
-      fiels = '__all__'
+      fields = '__all__'
 
 class WeightSerializer(serializers.ModelSerializer):
     class Meta:
       model = Weight
-      fiels = '__all__'
+      fields = '__all__'
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
